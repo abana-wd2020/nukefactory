@@ -1,0 +1,145 @@
+<html>
+  <link rel="stylesheet" href="css/andri.css">
+  <script src="js/blotter.min.js"></script>
+  <script src="js/liquidDistortMaterial.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/_brand.js"></script>
+<body>
+  <div class="navbar">
+    <div class="logo"><img src="img/logo1.png"></div>
+    <div class="right-menu">
+        <div class="menu-button">_aboutus</div>
+        <div class="dropdown-menu">
+        <a href="allprojects.html">_intro</a>
+        <a href="brand.html">_allproject</a>
+        <a href="contacts.html">_contactus</a>
+    </div>
+  </div>
+</div>
+  <div class= "cursor"></div>
+  <div class= "cursor-inner"></div>
+  <section id="firstPage">
+   
+    <div class="grid-container">
+        <div class="grid-item1">
+            <div class="foto1"><img src="img/ocelot.png"></div>
+        </div>  
+        <div class="grid-item2"> <h1>Ocelot</h1>
+        </div>
+  <div class="grid-item3"> <p>I topi non avevano nipoti ma avevano le zie che abitavano nelle fogne d'america. Si divertivano con le zie d'america perchè erano simpatiche e delle grandi ballerine.</p>
+  </div></div>  
+    </div>
+    
+<div class="imagePlus">
+  <img src="img/andri3.jpg">
+</div>
+<div class="imagePlus2">
+  <img src="img/andri2.jpg">
+</div>
+
+
+</section>
+<section id="secondPage">
+  <div class="grid-container">
+  <div class="grid-item-due1">
+    <div class="foto2"><img src="img/SF1000.png">
+    </div>
+    </div>
+    <div class="grid-item-due2"><h1> SF1000</h1>
+      </div>
+    <div class="grid-item-due3"><p>I topi non avevano nipoti ma avevano le zie che abitavano nelle fogne d'america. Si divertivano con le zie d'america perchè erano simpatiche e delle grandi ballerine.</p>
+    </div>
+  </div>  
+  <div class="imageAndri1">
+    <img src="img/SF1000_2.jpg">
+  </div>
+  <div class="imageAndri2">
+    <img src="img/SF1000_3.jpg">
+  </div>
+  
+  
+  </div>
+  </section>
+  <section id="thirdPage">
+    <div class="grid-container">
+      <div class="grid-item-tre1">
+        <div class="foto3"><img src="img/ezero.png"></div>
+      </div>
+      
+      <div class="grid-item-tre2"><h1>Ezero</h1></div>
+      <div class="grid-item-tre3"><p>I topi non avevano nipoti ma avevano le zie che abitavano nelle fogne d'america. Si divertivano con le zie d'america perchè erano simpatiche e delle grandi ballerine.</p>
+      </div>  
+     
+    </div>
+    <div class="imageGenni1">
+      <img src="img/EZERO-05.jpg">
+    </div>
+    <div class="imageGenni2">
+      <img src="img/ezero-03.jpg">
+    </div>
+    <div class="imageGenni3">
+      <img src="img/Apple iPhone 11 Pro.png">
+    </div>
+    <div class="separa">
+      <img src="img/line.png">
+    </div>
+    <div class="new">
+      <h2>.newProjects</h2>
+      <h3>CLICK FOR MORE WORKS</h3>
+    </div>
+    
+      <div class="container1"></div>
+        
+      </div>
+      <div class="app-image"><a href="mike.html">
+      <img src="img/theroom.png"></a>
+    </div>
+      
+    
+    </section>
+    
+    <script src="js/vanilla.js"></script>
+</body>
+<script>
+    var text = new Blotter.Text("Mike", {
+  family: "times bold",
+  size: 100,
+  fill: '#333333'
+  })
+  
+  
+  
+  var liquid = new Blotter.LiquidDistortMaterial()
+  
+  liquid.uniforms.uSpeed.value = 0.5
+  liquid.uniforms.uVolatility.value = 0.04
+  liquid.uniforms.uSeed.value = 0.1
+  
+  
+  
+  var bchannel = new Blotter(liquid, {
+     texts: text
+   }),
+   bsliding = new Blotter(liquid, {
+     texts: text
+   }),
+   brolling = new Blotter(liquid, {
+     texts: text
+   }),
+   bliquid = new Blotter(liquid, {
+     texts: text
+   })
+  
+  
+  var container1 = document.querySelector('.container1')
+  
+   
+  var bScopeC = bchannel.forText(text),
+   bScopeS = bsliding.forText(text),
+   bScopeR = brolling.forText(text),
+   bScopeL = bliquid.forText(text)
+   
+  
+  bScopeC.appendTo(container1)
+   
+     </script>

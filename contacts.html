@@ -1,0 +1,102 @@
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="css/contacts.css">
+    <script src="js/blotter.min.js"></script>
+    <script src="js/liquidDistortMaterial.js"></script>
+    <script src="js/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="logo"><img src="img/logo.png"></div>
+            <div class="right-menu">
+                <div class="menu-button">_contactus</div>
+                <div class="dropdown-menu">
+                <a href="allprojects.html">_intro</a>
+                <a href="brand.html">_allproject</a>
+                <a href="aboutUs.html">_aboutus</a>
+            </div>
+          </div>
+        </div>
+
+        <div class= "cursor"></div>
+        <div class= "cursor-inner"></div>
+
+          <div class="testi1"> <h1>Contacts</h1></div>
+          <div class="testi2"> <h1>Contacts</h1></div>
+
+          <div class="gridcontainer">
+          
+            <div class="mail"><a href="mailto:bangt96@email.com">Mail<br>us</a></div>
+
+          <div class="container1"></div>
+          <div class="container2"></div>
+          <div class="container3"></div>
+         
+            <div class="insta"><a href="https://www.instagram.com"><img src="img/Instagram.png"></a></div>
+          <div class="behance"><a href="https://www.behance.net"><img src='img/Behance.png'></a></div>
+          <div class="dribbble"><a href="https://dribbble.com"><img src='img/Dribble.png'></a></div>
+        
+        </div>
+
+        <script src="js/vanilla.js"></script>
+    </body>
+
+    <script>
+        var text = new Blotter.Text("_follow us", {
+     family: "arial black",
+     size: 100,
+     fill: '#000'
+   }) 
+   
+   var text2 = new Blotter.Text("_follow us", {
+     family: "arial black",
+     size: 100,
+     fill: '#000' 
+   
+   })
+
+   var text3 = new Blotter.Text("_follow us", {
+     family: "arial black",
+     size: 100,
+     fill: '#000' 
+   
+   })
+   
+   var liquid = new Blotter.LiquidDistortMaterial()
+   
+   liquid.uniforms.uSpeed.value = 0.1
+   liquid.uniforms.uVolatility.value = 0.05
+   liquid.uniforms.uSeed.value = 0.1
+   
+   
+   
+   var bchannel = new Blotter(liquid, {
+         texts: text
+       }),
+       bsliding = new Blotter(liquid, {
+         texts: text2
+       }),
+       brolling = new Blotter(liquid, {
+         texts: text3
+       }),
+       bliquid = new Blotter(liquid, {
+         texts: text2
+       })
+   
+   
+   var container1 = document.querySelector('.container1'),
+        container2 = document.querySelector('.container2'),
+       container3 = document.querySelector('.container3')
+   
+       
+   var bScopeC = bchannel.forText(text),
+       bScopeS = bsliding.forText(text2),
+       bScopeR = brolling.forText(text3),
+       bScopeL = bliquid.forText(text2)
+       
+   
+   bScopeC.appendTo(container1)
+   bScopeS.appendTo(container2) 
+   bScopeR.appendTo(container3) 
+         </script>
+</html>

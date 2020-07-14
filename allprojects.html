@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/allproject.css">
+        <script src="js/blotter.min.js"></script>
+        <script src="js/liquidDistortMaterial.js"></script>
+        <script src="js/jquery.min.js"></script>
+        
+    </head>
+    <body>
+          <div class="navbar">
+            <div class="logo"><img src="img/logo.png"></div>
+            <div class="right-menu">
+                <div class="menu-button">_intro</div>
+                <div class="dropdown-menu">
+                <a href="brand.html">_allproject</a>
+                <a href="aboutUs.html">_aboutus</a>
+                <a href="contacts.html">_contactus</a>
+            </div>
+          </div>
+        </div>
+
+        <div class= "cursor"></div>
+        <div class= "cursor-inner"></div>
+
+          <div class="container1"></div>
+          <div class="container2"></div>
+
+        
+            <div class="slider">
+              <div class="items1"><a href="brand.html"><img src="img/andri2.png"></a>
+              <div><p>01.Brand</p></div>
+              </div>
+              <div class="items2"><a href="3d.html"><img src="img/The Room-01.jpg"></a>
+                <div><p>02.3D</p></div>
+            </div>
+              <div class="items3"><a href="app.html"><img src="img/VRt-02.png"></a>
+                <div><p>03.UI/UX</p></div>
+                </div>
+              <div class="items4"><a href="illustration.html"><img src="img/kendrick-01.png"></a>
+                <div><p>04.Illustrations</p></div>
+            </div>
+            
+    </body>
+    <script src="js/vanilla.js"></script>
+   <script>
+
+     var text = new Blotter.Text("NUKE", {
+  family: "arial black",
+  size: 300,
+  fill: '#000000'
+}) 
+
+var text2 = new Blotter.Text(" FACTORY", {
+  family: "arial black",
+  size: 300,
+  fill: '#000'
+
+})
+
+var liquid = new Blotter.LiquidDistortMaterial()
+
+liquid.uniforms.uSpeed.value = 0.1
+liquid.uniforms.uVolatility.value = 0.05
+liquid.uniforms.uSeed.value = 0.1
+
+
+
+var bchannel = new Blotter(liquid, {
+      texts: text
+    }),
+    bsliding = new Blotter(liquid, {
+      texts: text2
+    }),
+    brolling = new Blotter(liquid, {
+      texts: text2
+    }),
+    bliquid = new Blotter(liquid, {
+      texts: text2
+    })
+
+
+var container1 = document.querySelector('.container1'),
+    container2 = document.querySelector('.container2')
+
+    
+var bScopeC = bchannel.forText(text),
+    bScopeS = bsliding.forText(text2),
+    bScopeR = brolling.forText(text2),
+    bScopeL = bliquid.forText(text2)
+    
+
+bScopeC.appendTo(container1)
+bScopeS.appendTo(container2) 
+      </script>
+
+</html>
